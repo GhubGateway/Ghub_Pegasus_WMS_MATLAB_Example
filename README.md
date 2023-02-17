@@ -1,6 +1,6 @@
 # https://github.com/rljbufny1/maxent_statistical_emulator
 
-# This repository contains code to implement a MaxEnt Statistical Emulator
+# This repository contains code to download a DEM file.
 
 # Specifically: 
 - xxx
