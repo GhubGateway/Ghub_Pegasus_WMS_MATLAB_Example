@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# Compile Matlab executables for the Pegasus workflow.
-# Required per the CCR Matlab license.
+# Compile Matlab executables for the Pegasus workflow;
+# required per the CCR Matlab license.
 
 module load gcc/10.2.0
 module load matlab/R2019b
