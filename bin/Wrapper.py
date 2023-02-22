@@ -1,10 +1,11 @@
 #----------------------------------------------------------------------------------------------------------------------
 # Class: Wrapper
-# Component of: ghub_exercise1 (https://vhub.org/tools/ismip6aissvn)
-# Called from: Invoked as a thread
+# Component of: ghub_exercise1 (github.com)
+# Called from: Invoked as a thread from ghub_exercise1.ipynb
 # Purpose: Run a Pegasus workflow via the HUBzero hublib.cmd interface
+# Author: Renette Jones-Ivey
 # Date: Feb 2023
-# ---------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------
 import sys
 import os
 
@@ -92,7 +93,7 @@ class Wrapper():
             # is returned
             
             matlab_launch_exec_path = os.path.join(self.tooldir, "remotebin", "matlabLaunch.sh")
-            print ("matlab_launch_exec_path : %s" %matlab_launch_exec_path)
+            #print ("matlab_launch_exec_path : %s" %matlab_launch_exec_path)
     
             e_matlab_launch = DAX3.Executable(namespace="ghub_exercise1-workflow", name="matlab-launch", \
                 os="linux", arch="x86_64", installed=False)

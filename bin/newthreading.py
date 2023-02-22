@@ -1,10 +1,10 @@
 #----------------------------------------------------------------------------------------------------------------------
 # Class: Thread
-# Component of: benthysplitwf (https://vhub.org/tools/benthysplitwf)
-# Called from: Imported from Benthysplitwf_GUI and Wrapper
+# Component of: ghub_exercise1 (github.com)
+# Called from: Wrapper.py
 # Purpose: Thread class derived from parent threading class
 # Author: Renette Jones-Ivey
-# Date: 08 Sept 2018
+# Date: Sept 2018
 # ---------------------------------------------------------------------------------------------------------------------
 import threading
 import os
