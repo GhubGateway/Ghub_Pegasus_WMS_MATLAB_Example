@@ -1,20 +1,30 @@
-# https://github.com/rljbufny1/ghub_exercise1
+## https://github.com/rljbufny1/ghub_exercise1
 
-## This repository contains a coordinate conversions exercise to demonstrate <br /> running a Ghub (https://theghub.org) Pegasus Workflow Management System (WMS) workflow with Matlab executables on CCR.
+## Demonstrates running a Ghub Pegasus Workflow Management System (WMS) workflow, with Matlab coordinate conversion executables, on CCR's generally accessible compute cluster, UB-HPC.
 
-### To run on Ghub:
+## Install on Ghub:
 
-#### Launch the Workspace 10 Tool:<br />
-Open a terminal window and enter:
+### Launch the Workspace 10 Tool and in a Terminal Widow enter:<br />
+
+```
 git clone https://github.com/rljbufny1/ghub_exercise1
+```
+or 
+```
+wget https://github.com/rljbufny1/ghub_exercise1/releases/download/v1.0.0/ghub_exercise1-src.tar.gz<br />
+tar xvzf ghub_exercise1-src.tar.gz
+```
 
-#### Launch  the Jupyter on Deb10 Tool:<br />
-Open ghub_exercise1/ghub_exercise1.ipynb<br />
-Click the Appmode button<br />
-Set the Latitude and Longitude Coordinates<br />
-Click the Run Workflow Button<br />
+## Launch on Ghub:
 
-#### See https://theghub.org/about for more information on Ghub. 
-#### See https://www.buffalo.edu/ccr.html for more information on CCR.
-#### See https://pegasus.isi.edu/about for more information on the Pegasus WMS. 
-#### See https://www.mathworks.com/matlabcentral/fileexchange/10915-deg2utm?status=SUCCESS and https://www.mathworks.com/matlabcentral/fileexchange/10914-utm2deg?s_tid=FX_rc1_behavfor for more information on the Matlab coordinate conversion scripts used for this exercise.
+### Launch  the Jupyter Notebooks (202210) tool:<br />
+
+Open ghub_exercise1/ghub_exercise1.ipynb.<br />
+Click the Appmode button.<br />
+
+## References:
+
+See https://theghub.org for more information on the Ghub Science Gateway.<br /> 
+See https://www.buffalo.edu/ccr.html for more information on the UB Center for Computational Research (CCR).<br />
+See https://pegasus.isi.edu/documentation/index.html for more information on the Pegasus Workflow Management Sytems (WMS).<br /> 
+See https://www.mathworks.com/matlabcentral/fileexchange/10915-deg2utm?status=SUCCESS and https://www.mathworks.com/matlabcentral/fileexchange/10914-utm2deg?s_tid=FX_rc1_behavfor for more information on the Matlab coordinate conversion scripts used for this exercise.
