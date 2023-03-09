@@ -1,6 +1,6 @@
 ## https://github.com/rljbufny1/ghub_exercise1
 
-## Demonstrates running a Ghub Pegasus Workflow Management System (WMS) workflow, with Matlab coordinate conversion executables, on CCR's generally accessible compute cluster, UB-HPC.
+## Demonstrates running a Ghub Pegasus Workflow Management System (WMS) workflow with Matlab coordinate conversion executables on CCR's generally accessible compute cluster, UB-HPC.
 
 ## Install on Ghub:
 
