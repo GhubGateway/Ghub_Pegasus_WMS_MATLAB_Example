@@ -11,7 +11,7 @@ git clone https://github.com/rljbufny1/ghub_exercise1
 ```
 or 
 ```
-wget https://github.com/rljbufny1/ghub_exercise1/releases/download/v1.0.0/ghub_exercise1-src.tar.gz<br />
+wget https://github.com/rljbufny1/ghub_exercise1/releases/download/V1.0.0/ghub_exercise1-src.tar.gz<br />
 tar xvzf ghub_exercise1-src.tar.gz
 ```
 
