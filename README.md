@@ -15,13 +15,13 @@
 
 The MATLAB scripts need to be compiled on CCR and the executables copied to the bin directory. See src/build_matlab_executables.sh for more information.
 
-Note: The executable files must have the executable file permission bits set. For example, use chmod 755 deg2utm and chmod 755 utm2deg to set the executable file permissions bits.
+Note: the executable files must have the executable file permission bits set. For example, use chmod 755 deg2utm and chmod 755 utm2deg to set the executable file permissions bits.
 
 #### middleware directory
 
 The middleware directory contains the invoke script which enables the ghub_exercise1.ipynb Jupyter Notebook to be launched on Ghub from the Ghub Dashboard's My Tools component.
 
-Note: The invoke script must have the executable file permission bits set. For example, use chmod 755 invoke to set the executable file permission bits.
+Note: the invoke script must have the executable file permission bits set. For example, use chmod 755 invoke to set the executable file permission bits.
 
 ### Install and Run the Tool on Ghub for Initial Testing (optional):
 
