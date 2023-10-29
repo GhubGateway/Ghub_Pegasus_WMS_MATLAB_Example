@@ -1,4 +1,4 @@
-## https://github.com/rljbufny1/ghub_exercise3
+## Ghub Pegasus WMS MATLAB Example
 
 - Demonstrates the procedure for hosting the Github tool, ghub_exercise3, on the Ghub Science Gateway.
 - Demonstrates running a Ghub Pegasus Workflow Management System (WMS) workflow with MATLAB coordinate conversion executables on University at Buffalo (UB)'s Center For Computational Research (CCR)'s generally accessible high performance compute cluster, UB-HPC.
