@@ -1,6 +1,6 @@
 ## Pegasus WMS MATLAB Workflow Example
 
-- Demonstrates hosting a GitHub tool on the Ghub Science Gateway and running a Ghub Pegasus Workflow Management System (WMS) MATLAB executables workflow on the University at Buffalo (UB)'s Center For Computational Research (CCR)'s generally accessible high performance compute cluster, UB-HPC.
+- Demonstrates hosting a GitHub tool on the Ghub Science Gateway and running a Ghub Pegasus Workflow Management System (WMS) workflow comprising MATLAB executables on the University at Buffalo (UB)'s Center For Computational Research (CCR)'s generally accessible high performance compute cluster, UB-HPC.
 - See https://theghub.org for more information on the Ghub Science Gateway.<br /> 
 - See https://www.buffalo.edu/ccr.html for more information on CCR.<br />
 - See https://pegasus.isi.edu/documentation/index.html for more information on the Pegasus WMS.<br /> 
@@ -14,17 +14,15 @@ This Jupyter Notebook provides the user interface for the Pegasus WMS workflow.
 
 #### src directory
 
-This directory contains the MATLAB scripts to run on CCR's high performance compute cluster. The MATLAB scripts need to be compiled on CCR and the executables copied to the bin directory and committed. See src/build_matlab_executables.sh for more information. If you need assistance compiling the MATLAB scripts for your tool, please open a Ghub support ticket.
+This directory contains the MATLAB scripts for this tool. The MATLAB scripts need to be compiled on CCR. The MATLAB scripts for this tool were compiled on CCR by running the bash script ./build_matlab_executables.sh. See https://docs.ccr.buffalo.edu/en/latest/hpc/login/ for instructions on how to log into a CCR login node. If you need assistance compiling the MATLAB scripts for your tool, please open a Ghub support ticket.
 
-#### bin directories
+#### bin directory
 
-This directory contains the MATLAB executables to run on CCR's high performance compute cluster. See the src/build_matlab_executables.sh for more information.
-
-Note: the executable files must have the executable file permission bits set. For example, use chmod 755 deg2utm and chmod 755 utm2deg to set the executable file permissions bits.
+This directory contains the submit wrapper script, Wrapper_5_0_1.py, used to plan the Pegasus WMS workflow.
 
 #### remoteBin directory
 
-This directory contains the bash script, matlabLaunch.sh, used by the Pegasus WMS to launch the MATLAB executables contained in the bin directory. See remotebin/matlabLaunch.sh for details. 
+This directory contains the bash script, matlabLaunch.sh, used by the Pegasus WMS to launch the MATLAB executables.
 
 #### middleware directory
 
