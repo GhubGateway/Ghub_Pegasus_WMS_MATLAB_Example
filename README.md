@@ -1,4 +1,4 @@
-## Pegasus WMS MATLAB Workflow Example
+## Pegasus WMS Workflow MATLAB Example
 
 - Demonstrates hosting a GitHub tool on the Ghub Science Gateway and running a Ghub Pegasus Workflow Management System (WMS) workflow comprising MATLAB executables on the University at Buffalo (UB)'s Center For Computational Research (CCR)'s generally accessible high performance compute cluster, UB-HPC.
 - See https://theghub.org for more information on the Ghub Science Gateway.<br /> 
