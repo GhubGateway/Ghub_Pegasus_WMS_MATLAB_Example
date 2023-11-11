@@ -1,4 +1,4 @@
-## Pegasus WMS MATLAB Workflow Example
+## Pegasus WMS Workflow MATLAB Example
 
 - Demonstrates hosting a GitHub tool on the Ghub Science Gateway and running a Ghub Pegasus Workflow Management System (WMS) workflow comprising MATLAB executables on the University at Buffalo (UB)'s Center For Computational Research (CCR)'s generally accessible high performance compute cluster, UB-HPC.
 - See https://theghub.org for more information on the Ghub Science Gateway.<br /> 
@@ -38,13 +38,13 @@ Note: when a new tool is created you will receive an email with a link to the to
 
 #### Host GIT repository on Github, Gitlab
 
-Follow the instructions on the https://theghub.org/tools/create web page. Select the Repository Host, Host GIT repository on Github, Gitlab. Select the Publishing Option, Jupyter Notebook. Enter the name of your tool, for example, ghubex3.
+Follow the instructions on the https://theghub.org/tools/create web page.  Enter the name of your tool; for this tool, ghubex3 was entered. Select the Repository Host, Host GIT repository on Github, Gitlab. Enter the Git Repository URL; for this tool, https://github.com/GhubGateway/Ghub_Pegasus_WMS_MATLAB_Example was entered. Select the Publishing Option, Jupyter Notebook. 
 
 #### Host subversion repository on HUB
 
 Alernately, follow the instructions on the https://theghub.org/tools/create web page to create a new tool and select the Repository Host: Host subversion repository on HUB. Select the Publishing Option, Jupyter Notebook, and enter the name of your tool, for example, ghubex3.
 
-In this case, the middleware/invoke script will be created automatically and stored in the subversion repository (svn) on Ghub. You will need to add ghub_exercise1.ipynb and the bin and remotebin directory files to the svn repository.
+In this case, the middleware/invoke script will be created automatically and stored in the subversion repository (svn) on Ghub. You will need to add ghub_exercise3.ipynb and the bin and remotebin directory files to the svn repository.
 
 Example svn commands:
 
