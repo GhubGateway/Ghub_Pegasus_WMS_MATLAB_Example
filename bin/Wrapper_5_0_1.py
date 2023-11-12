@@ -60,8 +60,10 @@ class Wrapper():
             #########################################################
             print ('Wrapper_5_0_1...')
     
-            wf = Workflow('ghub_exercise3-workflow')
+            wf = Workflow('ghubex3-workflow')
             tc = TransformationCatalog()
+            rc = ReplicaCatalog()
+
             
             # The MATLAB executables are stored in the CCR '/projects/grid/ghub/Tools/software/2023.01/matlab/ghubex3 directory.
             # See ./build_matlab_executables.sh for more information.
@@ -87,7 +89,12 @@ class Wrapper():
 
             # All files in a Pegasus workflow are referred to in the DAX using their Logical File Name (LFN).
             # These LFNs are mapped to Physical File Names (PFNs) when Pegasus plans the workflow.
-            
+            # Add input files to the DAX-level replica catalog
+
+            rc.add_replica('local', File('deg2utm'), os.path.join(self.bindir, 'deg2utm'))
+            rc.add_replica('local', File('utm2deg'), os.path.join(self.bindir, 'utm2deg'))
+            wf.add_replica_catalog(rc)
+
             # Add job(s) to the workflow
 
             # Note: on Ghub, .add_outputs register_replica must be set to False (the default is True) to prevent
@@ -95,6 +102,7 @@ class Wrapper():
 
             deg2utm_job = Job(matlablaunch)\
                 .add_args('''deg2utm %s %s''' %(self.latitude, self.longitude))\
+                .add_inputs(File('deg2utm'))\
                 .add_outputs(File('utm.txt'), stage_out=True, register_replica=False)\
                 .add_metadata(time='%d' %self.maxwalltime)
                 
@@ -102,6 +110,7 @@ class Wrapper():
 
             utm2deg_job = Job(matlablaunch)\
                 .add_args('''utm2deg''')\
+                .add_inputs(File('utm2deg'))\
                 .add_inputs(File('utm.txt'), bypass_staging=True)\
                 .add_outputs(File('deg.txt'), stage_out=True, register_replica=False)\
                 .add_metadata(time='%d' %self.maxwalltime)

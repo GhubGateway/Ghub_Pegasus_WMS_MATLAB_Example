@@ -9,13 +9,6 @@
 
 echo "$@"
 
-matlab_bin_dir='/projects/grid/ghub/Tools/software/2023.01/matlab/ghubex3/v1.0.0/bin'
-#echo ${matlab_bin_dir}
-
-PATH=$PATH:${matlab_bin_dir}
-export PATH
-echo PATH is ${PATH}
-
 # vortex
 module load gcc/10.2.0
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/util/academic/matlab/R2019b/bin/glnxa64
