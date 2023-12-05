@@ -4,11 +4,11 @@
 # Usage: login to CCR before running this script.
 
 # vortex
-module load gcc/10.2.0
-module load matlab/R2019b
+#module load gcc/10.2.0
+#module load matlab/R2019b
 # vortex-future
-#module load gcc/11.2.0
-#module load matlab/2021b
+module load gcc/11.2.0
+module load matlab/2021b
 
 # Note for ../remotebin/matlabLaunch.sh LD_LIBRARY_PATH
 which gcc

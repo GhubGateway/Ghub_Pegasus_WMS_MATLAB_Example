@@ -10,13 +10,13 @@
 echo "$@"
 
 # vortex
-module load gcc/10.2.0
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/util/academic/matlab/R2019b/bin/glnxa64
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/util/academic/matlab/R2019b/runtime/glnxa64
+#module load gcc/10.2.0
+#LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/util/academic/matlab/R2019b/bin/glnxa64
+#LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/util/academic/matlab/R2019b/runtime/glnxa64
 # vortex-future
-#module load gcc/11.2.0
-#LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/cvmfs/soft.ccr.buffalo.edu/versions/2023.01/easybuild/software/Core/matlab/2021b/bin/glnxa64
-#LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/cvmfs/soft.ccr.buffalo.edu/versions/2023.01/easybuild/software/Core/matlab/2021b/runtime/glnxa64
+module load gcc/11.2.0
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/cvmfs/soft.ccr.buffalo.edu/versions/2023.01/easybuild/software/Core/matlab/2021b/bin/glnxa64
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/cvmfs/soft.ccr.buffalo.edu/versions/2023.01/easybuild/software/Core/matlab/2021b/runtime/glnxa64
 export LD_LIBRARY_PATH
 echo LD_LIBRARY_PATH is ${LD_LIBRARY_PATH}
 

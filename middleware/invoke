@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # Reference: https://vhub.org/kb/Development/deploy-styles-for-jupyter-tools
-/usr/bin/invoke_app "$@" -C "start_jupyter -A -T @tool ghub_exercise3.ipynb" -t ghubex3 -u anaconda-7 -r none
+/usr/bin/invoke_app "$@" -C "start_jupyter -A -T @tool ghubex3.ipynb" -t ghubex3 -u anaconda-7 -r none
