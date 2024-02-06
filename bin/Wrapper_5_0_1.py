@@ -1,7 +1,7 @@
 #----------------------------------------------------------------------------------------------------------------------
 # Class: Wrapper_5.0.1
-# Component of: ghub_exercise3 (github.com)
-# Called from: ghub_exercise3.ipynb
+# Component of: ghubex3 (github.com)
+# Called from: ghubex3.ipynb
 # Purpose: Run a Pegasus WMS 5.0.1 workflow via the HUBzero hublib.cmd interface
 # Author: Renette Jones-Ivey
 # Date: Sept 2023
@@ -64,11 +64,9 @@ class Wrapper():
             tc = TransformationCatalog()
             rc = ReplicaCatalog()
 
-            
-            # The MATLAB executables are stored in the CCR '/projects/grid/ghub/Tools/software/2023.01/matlab/ghubex3 directory.
-            # See ./build_matlab_executables.sh for more information.
+            # See ../build_matlab_executables.sh for more information on creating the MATLAB executables for this tool.
 
-            # Add MATLAB launch script to the transformation catalog
+            # Add the MATLAB launch script to the transformation catalog. The launch script is run on CCR to run the MATLAB executables.
                 
             tooldir = os.path.dirname(os.path.dirname(os.path.realpath(os.path.abspath(__file__))))
             print ('tooldir: ', tooldir)
@@ -97,11 +95,12 @@ class Wrapper():
 
             # Add job(s) to the workflow
 
-            # Note: on Ghub, .add_outputs register_replica must be set to False (the default is True) to prevent
+            # Note: on CCR, the current directory is not added to $PATH automatically.
+            # On Ghub, .add_outputs register_replica must be set to False (the default is True) to prevent
             # Pegasus from returning with a post script failure.
 
             deg2utm_job = Job(matlablaunch)\
-                .add_args('''deg2utm %s %s''' %(self.latitude, self.longitude))\
+                .add_args('''./deg2utm %s %s''' %(self.latitude, self.longitude))\
                 .add_inputs(File('deg2utm'))\
                 .add_outputs(File('utm.txt'), stage_out=True, register_replica=False)\
                 .add_metadata(time='%d' %self.maxwalltime)
@@ -109,7 +108,7 @@ class Wrapper():
             wf.add_jobs(deg2utm_job)
 
             utm2deg_job = Job(matlablaunch)\
-                .add_args('''utm2deg''')\
+                .add_args('''./utm2deg''')\
                 .add_inputs(File('utm2deg'))\
                 .add_inputs(File('utm.txt'), bypass_staging=True)\
                 .add_outputs(File('deg.txt'), stage_out=True, register_replica=False)\
@@ -144,7 +143,7 @@ class Wrapper():
             #########################################################
     
             #'''
-            submitcmd = ['submit', '--venue', 'WF-ccr-ghub', 'pegasus-plan', '--dax', 'workflow.yml']
+            submitcmd = ['submit', '--venue', 'WF-vortex-ghub', 'pegasus-plan', '--dax', 'workflow.yml']
             #print ('submitcmd: ', submitcmd)
 
             # submit blocks.

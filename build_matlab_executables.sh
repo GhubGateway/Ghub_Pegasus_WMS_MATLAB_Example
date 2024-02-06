@@ -3,10 +3,7 @@
 # Compile Matlab executables on CCR for the Pegasus workflow.
 # Usage: login to CCR before running this script.
 
-# vortex
-#module load gcc/10.2.0
-#module load matlab/R2019b
-# vortex-future
+module load ccrsoft/2023.01
 module load gcc/11.2.0
 module load matlab/2021b
 
