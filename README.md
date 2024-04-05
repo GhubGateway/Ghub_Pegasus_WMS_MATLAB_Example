@@ -6,23 +6,21 @@
 - See https://pegasus.isi.edu/documentation/index.html for more information on the Pegasus WMS.<br /> 
 - See https://www.mathworks.com/matlabcentral/fileexchange/10915-deg2utm?status=SUCCESS and https://www.mathworks.com/matlabcentral/fileexchange/10914-utm2deg?s_tid=FX_rc1_behavfor for more information on the MATLAB coordinate conversion scripts used for this exercise.
 
-### Requirements:
+### Launch the MATLAB Executables:
+
+To compile the MATLAB Executables, see the Compile the MATLAB Executables section below.
 
 #### ghubex3.ipynb
 
 This Jupyter Notebook provides the user interface for the Pegasus WMS workflow.
 
-#### doc directory
-
-This directory contains the PDF file, Ghub_Pegasus_WMS_Workflow_MATLAB_Example.pdf.
-
 #### src directory
 
-This directory contains the MATLAB scripts for this tool. The MATLAB scripts need to be compiled on CCR and the MATLAB executables need to be pushed to the bin directory of this repository before creating the Ghub tool. The MATLAB scripts for this tool were compiled on CCR and pushed to the bin directory of this repository by running the bash script, ./build_matlab_executables.sh, on CCR. See https://docs.ccr.buffalo.edu/en/latest/hpc/login/ for instructions on how to log in to CCR. If you need assistance compiling the MATLAB scripts for your tool, please open a Ghub support ticket.
+This directory contains the MATLAB scripts for this tool. 
 
 #### bin directory
 
-This directory contains the submit wrapper script, Wrapper_5_0_1.py, used to plan the Pegasus WMS workflow. This directory also contains the compiled MATLAB executables.
+This directory contains the submit wrapper script, launchWrapper.py, used to plan the Pegasus WMS workflow. This directory also contains the compiled MATLAB executables.
 
 #### remoteBin directory
 
@@ -51,6 +49,35 @@ git clone https://github.com/GhubGateway/Ghub_Pegasus_WMS_MATLAB_Example ghubex3
 ```
 #### Launch the Jupyter Notebooks (202210) Tool from the Ghub Dashboard's My Tools component:<br />
 
+##### Launch the MATLAB Executables
+
 Open ghubex3/ghubex3.ipynb.<br />
 Click the Appmode button.<br />
+Click the Run Workflow button to lauch the MATLAB ececutables.<br />
+
+##### Compile the MATLAB Executables
+
+### Build The MATLAB Exectables:
+
+This section is intended for tool developers.
+
+#### matlabBuild.ipynb
+
+This Jupyter Notebook provides tool developers a mechanism to compile the MATLAB executables on CCR from the MATLAB scripts in the src directory and copy the compiled MATLAB executables to the bin directory.<br /> 
+
+Open ghubex3/matlabBuild.ipynb.<br />
+Click the Appmode button.<br />
+Click the Run Workflow button to compile the MATLAB ececutables.<br />
+
+#### src directory
+
+This directory contains the MATLAB scripts for this tool. 
+
+#### bin directory
+
+This directory also contains the submit wrapper script, buildWrapper.py. Compiled MATLAB executables are copied to this directory.
+
+#### remoteBin directory
+
+This directory also contains the bash script, matlabBuild.sh.
 
