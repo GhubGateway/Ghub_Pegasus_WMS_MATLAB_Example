@@ -1,14 +1,15 @@
 ## Pegasus WMS Workflow MATLAB Example
 
-- Provides a template for hosting a GitHub tool on the GHub Science Gateway and running a GHub Pegasus Workflow Management System (WMS) workflow comprising MATLAB executables, on the University at Buffalo (UB)'s Center For Computational Research (CCR)'s generally accessible high performance compute cluster, UB-HPC.
+This Jupyter Notebook tool provides a template for hosting a GitHub tool on the GHub Science Gateway and running a GHub Pegasus Workflow Management System (WMS) workflow, comprising MATLAB executables, on the University at Buffalo (UB)'s Center For Computational Research (CCR)'s generally accessible high performance compute cluster, UB-HPC.
+
+The GHub tool name for this template is ghubex3. The files provided by this template are specific for the ghubex3 tool. You will need to replace the files with files specific for your tool as required.
+
 - See https://theghub.org for more information on the GHub Science Gateway.<br /> 
 - See https://www.buffalo.edu/ccr.html for more information on CCR.<br />
 - See https://pegasus.isi.edu/documentation/index.html for more information on the Pegasus WMS.<br /> 
 - See https://www.mathworks.com/matlabcentral/fileexchange/10915-deg2utm?status=SUCCESS and https://www.mathworks.com/matlabcentral/fileexchange/10914-utm2deg?s_tid=FX_rc1_behavfor for more information on the MATLAB coordinate conversion scripts used for this exercise.
 
 ### Description of files and directories provided by this template:
-
-The GHub tool name alias for this template is ghubex3. The files provided by this template are specific for the ghubex3 tool. You will need to replace the files with files specific for your tool as required.
 
 #### ghubex3.ipynb
 
@@ -22,9 +23,13 @@ The MATLAB executables are compiled on CCR using the MATLAB mcc function.
 
 For provenance tracking, the compiled MATLAB executables are retained in your tool's bin directory.
 
+#### doc directory
+
+This directory contains the PDF file, Ghub_Pegasus_WMS_Workflow_MATLAB_Example.pdf.
+
 #### bin directory
 
-This directory contains the submit wrapper script, buildWrapper.py, used to compile the MATLAB executables on CCR. The compiled MATLAB executables are moved to this directory. This directory also contains the submit wrapper script, launchWrapper.py, used to plan and run the Pegasus WMS workflow. 
+This directory contains the submit wrapper script, buildWrapper.py, used to compile the MATLAB executables on CCR. The compiled MATLAB executables are moved to this directory. This directory also contains the submit wrapper script, launchWrapper.py, used to plan and run the Pegasus WMS workflow jobs on CCR. 
 
 #### remoteBin directory
 
@@ -37,6 +42,8 @@ This directory contains the invoke script which enables the ghubex3.ipynb Jupyte
 Note: the invoke script must have the executable file permission bits set. For example, use chmod 755 invoke to set the executable file permission bits.
 
 ### Create Your Tool on GHub:
+
+#### Host GIT repository on Github, Gitlab
 
 Follow the instructions on the https://theghub.org/tools/create web page.  Enter the alias name of your tool, for this template, ghubex3 was entered. Select the Repository Host, Host GIT repository on Github, Gitlab. Enter the Git Repository URL, for this tool, https://github.com/GhubGateway/Ghub_Pegasus_WMS_MATLAB_Example was entered. Select the Publishing Option, Jupyter Notebook. 
 
