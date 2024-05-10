@@ -1,13 +1,13 @@
 ## Pegasus WMS Workflow MATLAB Example
 
-This Jupyter Notebook tool provides a template for hosting a GitHub tool on the GHub Science Gateway and running a GHub Pegasus Workflow Management System (WMS) workflow, comprising MATLAB executables, on the University at Buffalo (UB)'s Center For Computational Research (CCR)'s generally accessible high performance compute cluster, UB-HPC.
+This Jupyter Notebook tool provides a template for running a GHub Science Gateway Pegasus Workflow Management System (WMS) workflow comprising, MATLAB executables, on the University at Buffalo (UB)'s Center For Computational Research (CCR)'s generally accessible high performance compute cluster, UB-HPC.
 
-The GHub tool name for this template is ghubex3. The files provided by this template are specific for the ghubex3 tool. You will need to replace the files with files specific for your tool as required.
+The GHub tool name for this template is ghubex3. The files provided by this template are specific for the ghubex3 tool. You will need to update / replace the files with files specific for your tool as required.
 
 - See https://theghub.org for more information on the GHub Science Gateway.<br /> 
-- See https://www.buffalo.edu/ccr.html for more information on CCR.<br />
+- See https://www.buffalo.edu/ccr.html for more information on the Center For Computational Research (CCR).<br />
 - See https://pegasus.isi.edu/documentation/index.html for more information on the Pegasus WMS.<br /> 
-- See https://www.mathworks.com/matlabcentral/fileexchange/10915-deg2utm?status=SUCCESS and https://www.mathworks.com/matlabcentral/fileexchange/10914-utm2deg?s_tid=FX_rc1_behavfor for more information on the MATLAB coordinate conversion scripts used for this exercise.
+- See https://www.mathworks.com/matlabcentral/fileexchange/10915-deg2utm?status=SUCCESS and https://www.mathworks.com/matlabcentral/fileexchange/10914-utm2deg?s_tid=FX_rc1_behavfor for more information on the MATLAB coordinate conversion scripts used for this template.
 
 ### Description of files and directories provided by this template:
 
@@ -43,9 +43,9 @@ Note: the invoke script must have the executable file permission bits set. For e
 
 ### Create Your Tool on GHub:
 
-#### Host GIT repository on Github, Gitlab
+#### Host GIT repository on HUB
 
-Follow the instructions on the https://theghub.org/tools/create web page.  Enter the alias name of your tool, for this template, ghubex3 was entered. Select the Repository Host, Host GIT repository on Github, Gitlab. Enter the Git Repository URL, for this tool, https://github.com/GhubGateway/Ghub_Pegasus_WMS_MATLAB_Example was entered. Select the Publishing Option, Jupyter Notebook. 
+Follow the instructions on the https://theghub.org/tools/create web page.  Enter a name for your tool, for this template, ghubex3 was entered. Select the Repository Host, Host GIT repository on HUB. Select the Publishing Option, Jupyter Notebook. 
 
 Note: when a new tool is created you will receive an email with a link to the tool's status page. The tool's status page will allow you to let the GHub administrators know when you are ready to update, install, approve or publish your tool.
 
@@ -57,28 +57,47 @@ Note: published tools are launched from the GHub Dashboard's My Tools component.
 
 	git clone https://github.com/GhubGateway/Ghub_Pegasus_WMS_MATLAB_Example ghubex3
 
-	git clone https://theghub.org/tools/\<your tool alias name\>/git/\<your tool alias name\> \<your tool alias name\>
+	git clone https://theghub.org/tools/\<your tool name\>/git/\<your tool name\> \<your tool name\>
 
-2) Copy ghubex3 template files to your tool's src, bin and remotebin directories as required.
+2) Copy ghubex3/matlabBuild.ipynb to \<your tool name\>/matlabBuild.ipynb.
 
-3) Update / replace the files in your tool's src, bin and remotebin directories with files specific for your tool as required. See below for more information.
+3) Copy template files from the ghubex3 src, bin and remotebin directories to your tool's src, bin and remotebin directories.
 
-#### Compile the MATLAB Executables for Your Tool:
+4) Update / replace the scripts in your tool's src directory with the scripts required for your tool.
 
-1) Replace the scripts in your tool's src directory with the scripts required for your tool.
-2) Update the matlabBuild.sh script in your tool's remotebin directory with the script required your your tool.
-3) Launch the Jupyter Notebooks (202210) tool from the GHub Dashboard's My Tools component tool and open the \<your tool alias name\>/matlabBuild.ipynb Jupyter Notebook.
-4) Update the self_binfiles list in the matlabBuild.ipynb notebook with the MATLAB executables required for your tool.
-5) Save the notebook update.
-6) Click the Appmode button.
-7) Click the Run Workflow button to compile the MATLAB executables. The MATLAB scripts in your tool's src directory are compiled on CCR and the returned MATLAB executables are moved your tools's bin directory.
+5) Update the matlabBuild.sh script in your tool's remotebin directory with the script required your your tool.
 
-#### Launch the MATLAB Executables for Your Tool:
+6) Update the launchWrapper.py script in your tool's bin directory with the script required your your tool.
 
-1) Update the launchWrapper.py in your tool's bin directory and the matlabLaunch.sh script in your tool's remotebin directory with the scripts required your your tool.
-2) Launch the Jupyter Notebooks (202210) tool from the GHub Dashboard's My Tools component tool and open the \<your tool alias name\>/\<your tool alias name\>.ipynb Jupyter Notebook.
-3) Update \<your tool alias name\>/\<your tool alias name\>.ipynb with the user interface required for your tool.
-4) Save the notebook updates.
-5) Click the Appmode button.
-6) Click the Run Workflow button to launch the MATLAB executables.
+### Compile the MATLAB Executables for Your Tool:
+
+1) Launch the Jupyter Notebooks (202210) tool from the GHub Dashboard's My Tools component tool and open the \<your tool name\>/matlabBuild.ipynb Jupyter Notebook.
+
+2) Update the self_binfiles list in the matlabBuild.ipynb notebook with the MATLAB executables required for your tool.
+
+3) Save the notebook update.
+
+4) Click the Appmode button.
+
+5) Click the Run Workflow button to compile the MATLAB executables. The MATLAB scripts in your tool's src directory are compiled on CCR and the returned MATLAB executables are moved your tools's bin directory.
+
+### Launch the MATLAB Executables for Your Tool:
+
+1) Launch the Jupyter Notebooks (202210) tool from the GHub Dashboard's My Tools component tool and open the \<your tool name\>/\<your tool name\>.ipynb Jupyter Notebook.
+
+2) Update \<your tool name\>/\<your tool name\>.ipynb with the user interface required for your tool.
+
+3) Save the notebook updates.
+
+4) Click the Appmode button.
+
+5) Click the Run Workflow button to launch the MATLAB executables.
+
+### Commit Your Tool Updates:
+
+1) Enter git add to add a new file or to update an existing file.
+
+2) Enter git commit -m "commit message"  to describe your updates.
+
+3) Enter git push origin master to push your updates to GIT repository on GHub.
 
