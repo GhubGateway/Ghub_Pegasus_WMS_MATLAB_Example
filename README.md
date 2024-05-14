@@ -1,10 +1,10 @@
 ## Pegasus WMS Workflow MATLAB Example
 
-This Jupyter Notebook tool provides a template for running a GHub Science Gateway Pegasus Workflow Management System (WMS) workflow comprising, MATLAB executables, on the University at Buffalo (UB)'s Center For Computational Research (CCR)'s generally accessible high performance compute cluster, UB-HPC.
+This Jupyter Notebook tool provides a template for running a Ghub Science Gateway Pegasus Workflow Management System (WMS) workflow, comprising MATLAB executables, on the University at Buffalo (UB)'s Center For Computational Research (CCR)'s generally accessible high performance compute cluster, UB-HPC.
 
-The GHub tool name for this template is ghubex3. The files provided by this template are specific for the ghubex3 tool. You will need to update / replace the files with files specific for your tool as required.
+The Ghub tool name for this template is ghubex3. The files provided by this template are specific for the ghubex3 tool. You will need to update / replace the files with files specific for your tool as required.
 
-- See https://theghub.org for more information on the GHub Science Gateway.<br /> 
+- See https://theghub.org for more information on the Ghub Science Gateway.<br /> 
 - See https://www.buffalo.edu/ccr.html for more information on the Center For Computational Research (CCR).<br />
 - See https://pegasus.isi.edu/documentation/index.html for more information on the Pegasus WMS.<br /> 
 - See https://www.mathworks.com/matlabcentral/fileexchange/10915-deg2utm?status=SUCCESS and https://www.mathworks.com/matlabcentral/fileexchange/10914-utm2deg?s_tid=FX_rc1_behavfor for more information on the MATLAB coordinate conversion scripts used for this template.
@@ -37,23 +37,23 @@ This directory contains the bash script, matlabBuild.sh, used to build the MATLA
 
 #### middleware directory
 
-This directory contains the invoke script which enables the ghubex3.ipynb Jupyter Notebook to be launched on GHub.
+This directory contains the invoke script which enables the ghubex3.ipynb Jupyter Notebook to be launched on Ghub.
 
 Note: the invoke script must have the executable file permission bits set. For example, use chmod 755 invoke to set the executable file permission bits.
 
-### Create Your Tool on GHub:
+### Create Your Tool on Ghub:
 
 #### Host GIT repository on HUB
 
 Follow the instructions on the https://theghub.org/tools/create web page.  Enter a name for your tool, for this template, ghubex3 was entered. Select the Repository Host, Host GIT repository on HUB. Select the Publishing Option, Jupyter Notebook. 
 
-Note: when a new tool is created you will receive an email with a link to the tool's status page. The tool's status page will allow you to let the GHub administrators know when you are ready to update, install, approve or publish your tool.
+Note: when a new tool is created you will receive an email with a link to the tool's status page. The tool's status page will allow you to let the Ghub administrators know when you are ready to update, install, approve or publish your tool.
 
-Note: published tools are launched from the GHub Dashboard's My Tools component.
+Note: published tools are launched from the Ghub Dashboard's My Tools component.
 
 ### Update Your Tool:
 
-1) Launch the Workspace 10 Tool from the GHub Dashboard's My Tools component and in a xterm terminal window enter:
+1) Launch the Workspace 10 Tool from the Ghub Dashboard's My Tools component and in a xterm terminal window enter:
 
 	git clone https://github.com/GhubGateway/Ghub_Pegasus_WMS_MATLAB_Example ghubex3
 
@@ -69,9 +69,11 @@ Note: published tools are launched from the GHub Dashboard's My Tools component.
 
 6) Update the launchWrapper.py script in your tool's bin directory with the script required your your tool.
 
+7) Compare the invoke script in your tool's middleware directory with the invoke script in the ghubex3 middleware directory and update as required.
+
 ### Compile the MATLAB Executables for Your Tool:
 
-1) Launch the Jupyter Notebooks (202210) tool from the GHub Dashboard's My Tools component tool and open the \<your tool name\>/matlabBuild.ipynb Jupyter Notebook.
+1) Launch the Jupyter Notebooks (202210) tool from the Ghub Dashboard's My Tools component tool and open the \<your tool name\>/matlabBuild.ipynb Jupyter Notebook.
 
 2) Update the self_binfiles list in the matlabBuild.ipynb notebook with the MATLAB executables required for your tool.
 
@@ -83,7 +85,7 @@ Note: published tools are launched from the GHub Dashboard's My Tools component.
 
 ### Launch the MATLAB Executables for Your Tool:
 
-1) Launch the Jupyter Notebooks (202210) tool from the GHub Dashboard's My Tools component tool and open the \<your tool name\>/\<your tool name\>.ipynb Jupyter Notebook.
+1) Launch the Jupyter Notebooks (202210) tool from the Ghub Dashboard's My Tools component tool and open the \<your tool name\>/\<your tool name\>.ipynb Jupyter Notebook.
 
 2) Update \<your tool name\>/\<your tool name\>.ipynb with the user interface required for your tool.
 
@@ -99,5 +101,5 @@ Note: published tools are launched from the GHub Dashboard's My Tools component.
 
 2) Enter git commit -m "commit message"  to describe your updates.
 
-3) Enter git push origin master to push your updates to GIT repository on GHub.
+3) Enter git push origin master to push your updates to GIT repository on Ghub.
 
