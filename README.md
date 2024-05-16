@@ -45,7 +45,7 @@ Note: the invoke script must have the executable file permission bits set. For e
 
 #### Host GIT repository on HUB
 
-Follow the instructions on the https://theghub.org/tools/create web page.  Enter a name for your tool, for this template, ghubex3 was entered. Select the Repository Host, Host GIT repository on HUB. Select the Publishing Option, Jupyter Notebook. 
+Follow the instructions on the https://theghub.org/tools/create web page.  Enter a name for your tool. Select the Repository Host, Host GIT repository on HUB. Select the Publishing Option, Jupyter Notebook. 
 
 Note: when a new tool is created you will receive an email with a link to the tool's status page. The tool's status page will allow you to let the Ghub administrators know when you are ready to update, install, approve or publish your tool.
 
